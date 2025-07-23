@@ -1,0 +1,16 @@
+spring:
+  r2dbc:
+    url: r2dbc:pool:postgresql://localhost:5432/orderdb
+    username: postgres
+    password: postgres
+#  datasource:
+#    driver-class-name: org.postgresql.Driver
+#  sql:
+#    init:
+#      mode: always
+server:
+  port: 8080
+
+
+
+
