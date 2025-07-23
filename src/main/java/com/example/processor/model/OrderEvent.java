@@ -16,8 +16,8 @@ import lombok.Builder;
 public class OrderEvent {
     @Id
     private Long id;
-    private String orderId;
-    private String product;
+    private String customerId;
+    private String productId;
     private int quantity;
     private String status;
 }

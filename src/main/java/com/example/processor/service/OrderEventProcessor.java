@@ -22,14 +22,14 @@ public class OrderEventProcessor {
     }
 
     private Mono<OrderEvent> validate(OrderEvent event) {
-        if (event.getOrderId() == null || event.getProduct() == null) {
+        if (event.getCustomerId() == null || event.getProductId() == null) {
             return Mono.error(new IllegalArgumentException("Invalid order event"));
         }
         return Mono.just(event);
     }
 
     private Mono<OrderEvent> normalize(OrderEvent event) {
-        event.setProduct(event.getProduct().trim().toUpperCase());
+        event.setProductId(event.getProductId().trim().toUpperCase());
         return Mono.just(event);
     }
 
